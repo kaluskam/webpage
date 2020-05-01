@@ -1,13 +1,246 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-bottom: 2px solid #011627;
+    background-color: aliceblue;
+
+    caret-color: #011627;    
+    font-weight: 600;
+    font-size: 1.25em;
 }
+.nav-bar span {
+    margin: 10px;
+    
+    color: #011627;
+    text-decoration: none;
+}
+#right-bar {
+    margin-left: auto;
+}
+.nav-bar .btn {
+    cursor: pointer;
+}
+
+
+
+.modal-login{
+    display: flex;
+    margin: 60px auto;
+    width: 40%;
+    min-width: 300px;
+    max-width: 350px;
+
+}
+
+
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;    
+    padding: 5px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 350px;
+
+    background-color: white;
+    box-shadow:  0px 5px 10px 5px rgba(210, 210, 210, 0.8);
+    border-radius: 20px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.close-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: auto;
+    margin-bottom: 40px;
+
+    text-align: center;
+    font-weight: 600;
+    color: white;
+
+    background-color: #cf0000;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    border: none;
+}
+/* input[type=text], input[type=password], input[type=email] { */
+.log-reg-input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 15px;
+
+    border: 1px solid #cf0000;
+    border-radius: 25px;
+}
+.log-reg-btn {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 15px;
+
+    border-radius: 25px;
+    background: #cf0000;
+
+    text-align: center;
+    font-weight: 600;
+    color: white;
+
+    -moz-user-select: none;
+    cursor: pointer;
+    
+}
+#login-form .under-btn { 
+    width: 90%;
+    margin-top: 4px;
+    margin-bottom: 100px;
+    margin-left: 15px;
+
+    font-size: 13px;
+    color: gray; 
+}
+#login-form .register {
+    margin-bottom: 30px;
+    background-color: transparent;
+    border: none;
+
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+
+
+.modal-register {
+    display: flex;
+    margin: 60px auto;
+    width: 40%;
+    min-width: 350px;
+    max-width: 450px;
+}
+#registration-form {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    padding: 5px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 350px;
+
+    background-color: white;
+    box-shadow:  0px 5px 10px 5px rgba(210, 210, 210, 0.8);
+    border-radius: 20px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#registration-form .login {
+    margin-bottom: 30px;
+    background-color: transparent;
+    border: none;
+
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+#registration-form #name-surname {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#home {
+    margin-left: 40px;
+
+    color: #011627;
+}
+#home-description {
+    width: 40%;
+    margin-top: 20px;
+    
+    color: #011627;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.post-input {
+    width: 100%-5px;
+    min-height: 50px;
+    margin-left: 0;
+    resize: none;
+
+    border: 2px solid #011627; /*rgb(200, 200, 200); */
+    
+    font-size: 1em;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.post-btn {
+    padding: 12px 20px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 10px;
+
+    border: none;
+    background: #cf0000;
+
+    text-align: center;
+    font-weight: 600;
+    color: white;
+
+    -moz-user-select: none;
+    cursor: pointer;
+}
+
+
+.post-list {
+    width: 50%;
+}
+.post {    
+    display: flex;
+    flex-direction: column;
+    width: 100%-5px;
+    margin-left: 0;
+    margin-bottom: 20px;
+
+    font-size: 16px;    
+}
+.post .post-content {
+    border-bottom: 2px solid #011627;
+    margin-bottom: 0;
+}
+.post .post-buttons {
+    display: flex;
+    flex-direction: row;    
+    margin-left: auto;
+    margin-bottom: auto;
+
+    align-items: flex-start;
+}
+.post .post-buttons .post-btn2 {
+    padding: 2px;
+    min-width: 50px;
+
+    border: none;
+    background: #cf0000;
+
+    text-align: center;
+    font-weight: 600;
+    color: white;
+
+    -moz-user-select: none;
+    cursor: pointer;
+}
+
