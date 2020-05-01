@@ -6,7 +6,6 @@ class Home extends React.Component {
     constructor() {
         super()
         this.state = {
-            posts: [],
             curContent: ""
         }
         this.addPost = this.addPost.bind(this)
@@ -17,13 +16,8 @@ class Home extends React.Component {
         this.setState({ curContent: event.target.value })
     }
     addPost() {
-        this.setState(state => {
-            const posts = state.posts.concat( state.curContent )
-            return {
-                posts,
-                curContent: ''
-            }
-        })
+        this.refs.postlist.addPost(this.state.curContent)
+        this.setState({curContent: ''})
     }
     render() {
         return(
@@ -42,7 +36,7 @@ class Home extends React.Component {
                 </div>
                 
                 <div>
-                    <PostList posts={this.state.posts} />
+                    <PostList ref="postlist"/>
                 </div>
                 
 
