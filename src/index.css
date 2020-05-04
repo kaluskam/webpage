@@ -218,8 +218,15 @@ body {
     font-size: 16px;    
 }
 .post .post-content {
-    border-bottom: 2px solid #011627;
+    resize: none;
     margin-bottom: 0;
+
+    border: none;
+    border-bottom: 2px solid #011627;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    
 }
 .post .post-buttons {
     display: flex;
@@ -242,5 +249,9 @@ body {
 
     -moz-user-select: none;
     cursor: pointer;
+}
+.post .author-date {
+    font-style: italic;
+    color: gray;
 }
 

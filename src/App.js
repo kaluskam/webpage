@@ -66,7 +66,7 @@ class App extends React.Component {
               <Registration exit={this.closeRegistration} openLogin={this.openLogin}/>
             </Modal>
             <Switch>                            
-              <Route path="/" exact component={Home} />
+              <Route path="/" exact render={props => (<Home loggedIn={this.state.loggedIn} user={this.state.user}/>)} />
               <Route path="/AM" component={AM} />
               {/* <Route path="/MDiEP" component={MDiEP} />              
               <Route path="/PO" component={PO} />
